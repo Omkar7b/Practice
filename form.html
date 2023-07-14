@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        form {
+            text-align: center;
+            border: 1px solid orange;
+            width: 500px;
+            height: 300px;
+            padding: 20px;
+        }
+        input{
+            width: 500px;
+            height:25px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <form action="#" onsubmit="ongetacall(event)">
+        <label for="book" style= "color:orange; text-align:center;">Book a Call</label><br/>
+        <label for="book" style="font-size: 12px; text-align: center;">Book a call slot and our representative will call you within 1hr hour of selected time</label><hr />
+        <label for="name" style="text-align:start;">Name:</label><br/>
+        <input type="name" id="name" name="name" required/><br />
+        <lable for="email">Email:</lable><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="phone">Phone No:</label><br />
+        <input type="tel" id="phone" maxlength="10" required /><br />
+        <lable for="time"> Time of call:</lable><br />
+        <input type="date" id="date" name="time"  style=" width:245px;" />
+        <select id="time" name="time" style=" width: 246px; height: 25px;">
+            <option value='11:00'>11:00</option>
+            <option value='12:00'>12:00</option>
+            <option value='1:00'>1:00</option>
+            <option value='2:00'>2:00</option>
+            <option value='3:00'>3:00</option> 
+            <option value='4:00'>4:00</option>
+            <option value='5:00'>5:00</option>
+            <option value='6:00'>6:00</option>
+        </select><br />
+        <br />
+        <button style="background-color: orange; width: 500px; height: 25px;">Get a Call</button>
+    </form>
+   <script >
+     function ongetacall() {
+             event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const time = document.getElementById('time').value;
+     }
+   </script>
+</body>
+</html>
